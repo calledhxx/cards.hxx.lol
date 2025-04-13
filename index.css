@@ -48,7 +48,7 @@ body{
     height: 720px;
 
     position: absolute;
-    transform: translate(-50%,-50%) rotateY(300deg);
+    transform: translate(-50%,-50%) rotateY(45deg);
 
     border-radius: 60px;
 
@@ -60,9 +60,6 @@ body{
     border: #656565 3px solid;
     box-shadow: #3f3f3f 0 0 20px 1px;
     background: #c0c0c0;
-
-
-
 }
 
 .CardBackGround{
