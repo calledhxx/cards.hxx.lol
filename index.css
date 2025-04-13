@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    -webkit-user-drag: none; /* Safari, Chrome */
+    -moz-user-drag: none;  /* Firefox */
+    -ms-user-drag: none;   /* IE 10+ */
+    user-drag: none;       /* 通用 */
+
+    font-family: sans-serif !important;
+
+}
+
+body{
+    overflow: hidden;
+
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+#Cards{
+    width: 100%;
+    height: 100%;
+
+}
+
+#BackGround{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: #313131;
+
+    z-index: -1 ;
+}
+
+.Card{
+    width: 500px;
+    height: 720px;
+
+    position: absolute;
+    transform: translate(-50%,-50%) rotateY(300deg);
+
+    border-radius: 60px;
+
+    left: 50%;
+    top: 50%;
+
+    overflow: hidden;
+
+    border: #656565 3px solid;
+    box-shadow: #3f3f3f 0 0 20px 1px;
+    background: #c0c0c0;
+
+
+
+}
+
+.CardBackGround{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    background-image: url("/back.png");
+    background-size: 100px;
+
+    opacity: 0.032;
+
+    z-index: 1;
+}
+
+
+
+.backOfCard{
+    width: calc(100% - 50px) ;
+    height: calc(100% - 50px) ;
+
+    border-radius: 40px;
+    background: #b9b9b9;
+
+    position: absolute;
+    transform: translate(-50%,-50%) scaleX(-1);
+    left: 50%;
+    top: 50%;
+
+    opacity: 0;
+
+
+
+    font-size: 50px;
+    color: white;
+
+
+
+
+    transition: all 0.12s;
+
+
+
+}
+
+.frontOfCard{
+    width: calc(100% - 50px) ;
+    height: calc(100% - 50px) ;
+
+    border-radius: 40px;
+    background: #9277cc;
+
+
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+
+    opacity: 0;
+
+    font-size: 20px;
+    color: white;
+
+
+    transition: all 0.12s;
+}
+
+.CardFlash{
+    width: 220%;
+    height: 300px;
+
+    transform: translateX(-50%) rotateZ(144deg);
+    left: 50%;
+    top: 50%;
+
+    position: absolute;
+    background: linear-gradient( 180deg, #d3d3d3, #ffffff, #919191);
+
+    filter: blur(50px);
+
+    opacity: 0.42;
+}
+
+.frontTopBar{
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background: #664fa8;
+
+    border-radius: 40px 40px 50% 50%;
+
+    position: absolute;
+    z-index: 1;
+
+    padding-top:15px;
+    border-bottom: #533e8a 3px solid;
+}
+
+.CardName{
+    font-size: 30px;
+    flex-shrink: 0;
+    text-shadow: white 0 0 10px;
+}
+
+.CardLevel{
+    flex-shrink: 0;
+
+    width: 120px;
+    height: 40px;
+
+    background: #ffab00;
+    border-radius: 10px 10px  50% 50%;
+    z-index: 1;
+
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow: white 0 0 10px;
+    box-shadow: #ffb000 0 0 20px 1px;
+
+    border: #a87b0a 3px solid;
+}
+
+.frontMiddle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height : 100%;
+    width: 100%;
+
+    position: absolute;
+}
+
+.CardImage{
+    width: calc(100% - 4px - 20px);
+    height: auto;
+    border: #533e8a 2px solid;
+
+    border-radius: 40px;
+
+    margin: 10px;
+}
+
+.CardInfo{
+    width: calc(100% - 4px - 20px);
+    height: 100%;
+
+    background: #664fa8;
+
+    border: #533e8a 2px solid;
+    border-top: none;
+
+
+    transition: all 1s;
+    border-radius:  40px;
+
+    margin: 10px;
+
+    overflow: hidden;
+
+}
+
+.mainSkillName{
+    font-size: 36px;
+    margin: 5px 30px 5px 30px;
+    color: #ffffff;
+    opacity: .83;
+    white-space: pre-line;
+    text-shadow: white 0 0 10px;
+
+}
+
+.mainSkillName:before{
+    content: '• ';
+}
+
+.mainSkillInfo{
+    font-size: 20px;
+    margin: 5px 30px 5px 30px;
+
+    color: #e5e5e5;
+    opacity: .83;
+    white-space: pre-line;
+    text-shadow: white 0 0 10px;
+
+
+}
+
+.pvp{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pvpInfo{
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 10px 0 10px;
+}
+
+.pvpInfo h1{
+    flex-shrink: 0;
+    font-size: 35px;
+
+    text-shadow: white 0 0 10px;
+}
+
+.pvpInfo h6{
+    flex-shrink: 0;
+    font-size: 20px;
+
+    text-shadow: white 0 0 10px;
+}
